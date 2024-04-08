@@ -10,6 +10,7 @@ class AppImages {
   static const String activeProfile = "assets/icons/active_profile.svg";
   static const String moon = "assets/icons/moon.svg";
   static const String circle = "assets/icons/circle.svg";
+  static const String uzb = "assets/icons/uzb.svg";
 
 
   //.jpg

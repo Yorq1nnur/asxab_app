@@ -1,3 +1,4 @@
+import 'package:asxab_app/screens/tabs/routes.dart';
 import 'package:asxab_app/utils/colors/app_colors.dart';
 import 'package:asxab_app/utils/images/app_images.dart';
 import 'package:asxab_app/utils/styles/app_text_style.dart';
@@ -93,7 +94,10 @@ class FastingScreen extends StatelessWidget {
                         ),
                         child: InkWell(
                           onTap: () {
-
+                            Navigator.pushNamed(
+                              context,
+                              RouteNames.countScreen,
+                            );
                           },
                           child: Center(
                             child: Text(
