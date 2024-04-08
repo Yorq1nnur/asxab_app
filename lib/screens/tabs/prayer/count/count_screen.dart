@@ -2,7 +2,6 @@ import 'package:asxab_app/screens/global_widgets/my_ink_well.dart';
 import 'package:asxab_app/utils/colors/app_colors.dart';
 import 'package:asxab_app/utils/images/app_images.dart';
 import 'package:asxab_app/utils/styles/app_text_style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -194,6 +193,10 @@ class _CountScreenState extends State<CountScreen> {
                                 ),
                                 child: Center(
                                   child: TextField(
+                                    keyboardType: TextInputType.number,
+                                    textInputAction: index == 2
+                                        ? TextInputAction.done
+                                        : TextInputAction.next,
                                     style: AppTextStyle.interBold.copyWith(
                                       fontSize: 18.w,
                                       fontWeight: FontWeight.w400,
@@ -256,6 +259,8 @@ class _CountScreenState extends State<CountScreen> {
                           ),
                         ),
                         child: TextField(
+                          textInputAction: TextInputAction.done,
+                          keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -298,6 +303,8 @@ class _CountScreenState extends State<CountScreen> {
                                 right: 60.w,
                               ),
                               child: TextField(
+                                textInputAction: TextInputAction.done,
+                                keyboardType: TextInputType.number,
                                 maxLines: 2,
                                 decoration: InputDecoration(
                                   hintText:
@@ -319,7 +326,9 @@ class _CountScreenState extends State<CountScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 10.h,),
+            SizedBox(
+              height: 10.h,
+            ),
             MyInkWell(
               voidCallback: () {},
               title: 'Tasdiqlash',
