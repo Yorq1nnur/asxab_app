@@ -1,3 +1,4 @@
+import 'package:asxab_app/screens/global_widgets/my_ink_well.dart';
 import 'package:asxab_app/screens/tabs/routes.dart';
 import 'package:asxab_app/utils/colors/app_colors.dart';
 import 'package:asxab_app/utils/images/app_images.dart';
@@ -85,30 +86,14 @@ class FastingScreen extends StatelessWidget {
                     SizedBox(
                       height: 30.h,
                     ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 24.w),
-                      child: Ink(
-                        height: 57.h,
-                        decoration: const BoxDecoration(
-                          color: AppColors.c33CBC2,
-                        ),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(
-                              context,
-                              RouteNames.countScreen,
-                            );
-                          },
-                          child: Center(
-                            child: Text(
-                              "Hisoblash",
-                              style: AppTextStyle.interBold
-                                  .copyWith(color: Colors.white),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
+                    MyInkWell(
+                        voidCallback: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteNames.countScreen,
+                          );
+                        },
+                        title: "Hisoblash")
                   ],
                 ),
               ),
