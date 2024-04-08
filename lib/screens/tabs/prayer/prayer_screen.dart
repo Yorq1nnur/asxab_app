@@ -2,7 +2,6 @@ import 'package:asxab_app/screens/tabs/routes.dart';
 import 'package:asxab_app/utils/colors/app_colors.dart';
 import 'package:asxab_app/utils/images/app_images.dart';
 import 'package:asxab_app/utils/styles/app_text_style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
