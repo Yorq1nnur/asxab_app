@@ -49,7 +49,7 @@ class _CountScreenState extends State<CountScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: 48.h,
+                      height: 40.h,
                     ),
                     Padding(
                       padding: EdgeInsets.only(
@@ -133,7 +133,7 @@ class _CountScreenState extends State<CountScreen> {
                       ),
                     ),
                     SizedBox(
-                      height: 30.h,
+                      height: 20.h,
                     ),
                     Padding(
                       padding: EdgeInsets.only(
@@ -151,7 +151,7 @@ class _CountScreenState extends State<CountScreen> {
                       ),
                     ),
                     SizedBox(
-                      height: 30.h,
+                      height: 20.h,
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(
@@ -169,7 +169,7 @@ class _CountScreenState extends State<CountScreen> {
                       ),
                     ),
                     SizedBox(
-                      height: 14.h,
+                      height: 10.h,
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 24.w),
@@ -180,49 +180,53 @@ class _CountScreenState extends State<CountScreen> {
                             3,
                             (index) {
                               controllers[index].text = titles[index];
-                              return Container(
-                                width: 100.w,
-                                decoration: BoxDecoration(
-                                  color: Colors.pinkAccent.withOpacity(
-                                    0.1,
-                                  ),
-                                  border: Border.all(
-                                    color: AppColors.cEEEEEE,
-                                    width: 1.w,
-                                  ),
-                                ),
-                                child: Center(
-                                  child: TextField(
-                                    keyboardType: TextInputType.number,
-                                    textInputAction: index == 2
-                                        ? TextInputAction.done
-                                        : TextInputAction.next,
-                                    style: AppTextStyle.interBold.copyWith(
-                                      fontSize: 18.w,
-                                      fontWeight: FontWeight.w400,
-                                      color: AppColors.c1A1A1A.withOpacity(
-                                        0.3,
-                                      ),
+                              return SizedBox(
+                                height: 57.h,
+                                child: Container(
+                                  height: 57.h,
+                                  width: 100.w,
+                                  decoration: BoxDecoration(
+                                    color: Colors.pinkAccent.withOpacity(
+                                      0.1,
                                     ),
-                                    textAlign: TextAlign.center,
-                                    decoration: InputDecoration(
-                                      fillColor:
-                                          Colors.pinkAccent.withOpacity(0.11),
-                                      hoverColor:
-                                          Colors.pinkAccent.withOpacity(0.11),
-                                      hintText: titles[index],
-                                      hintStyle:
-                                          AppTextStyle.interBold.copyWith(
+                                    border: Border.all(
+                                      color: AppColors.cEEEEEE,
+                                      width: 1.w,
+                                    ),
+                                  ),
+                                  child: Center(
+                                    child: TextField(
+                                      keyboardType: TextInputType.number,
+                                      textInputAction: index == 2
+                                          ? TextInputAction.done
+                                          : TextInputAction.next,
+                                      style: AppTextStyle.interBold.copyWith(
+                                        fontSize: 18.w,
+                                        fontWeight: FontWeight.w400,
                                         color: AppColors.c1A1A1A.withOpacity(
                                           0.3,
                                         ),
-                                        fontSize: 18.w,
-                                        fontWeight: FontWeight.w400,
                                       ),
-                                      border: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: AppColors.cEEEEEE,
-                                          width: 1.w,
+                                      textAlign: TextAlign.center,
+                                      decoration: InputDecoration(
+                                        fillColor:
+                                            Colors.pinkAccent.withOpacity(0.11),
+                                        hoverColor:
+                                            Colors.pinkAccent.withOpacity(0.11),
+                                        hintText: titles[index],
+                                        hintStyle:
+                                            AppTextStyle.interBold.copyWith(
+                                          color: AppColors.c1A1A1A.withOpacity(
+                                            0.3,
+                                          ),
+                                          fontSize: 18.w,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                        border: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: AppColors.cEEEEEE,
+                                            width: 1.w,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -237,7 +241,7 @@ class _CountScreenState extends State<CountScreen> {
                     Padding(
                       padding: EdgeInsets.only(
                         left: 24.w,
-                        bottom: 14.h,
+                        bottom: 10.h,
                         top: 24.h,
                       ),
                       child: Text(
@@ -252,29 +256,32 @@ class _CountScreenState extends State<CountScreen> {
                       padding: EdgeInsets.symmetric(
                         horizontal: 24.w,
                       ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.pinkAccent.withOpacity(
-                            0.1,
-                          ),
-                        ),
-                        child: TextField(
-                          textInputAction: TextInputAction.done,
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: AppColors.cEEEEEE,
-                                width: 1.w,
-                              ),
+                      child: SizedBox(
+                        height: 57.h,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.pinkAccent.withOpacity(
+                              0.1,
                             ),
-                            hintText: 'Masalan: 60 kun',
-                            hintStyle: AppTextStyle.interBold.copyWith(
-                              color: AppColors.c1A1A1A.withOpacity(
-                                0.3,
+                          ),
+                          child: TextField(
+                            textInputAction: TextInputAction.done,
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: AppColors.cEEEEEE,
+                                  width: 1.w,
+                                ),
                               ),
-                              fontSize: 18.w,
-                              fontWeight: FontWeight.w400,
+                              hintText: 'Masalan: 60 kun',
+                              hintStyle: AppTextStyle.interBold.copyWith(
+                                color: AppColors.c1A1A1A.withOpacity(
+                                  0.3,
+                                ),
+                                fontSize: 18.w,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
                           ),
                         ),
@@ -284,44 +291,54 @@ class _CountScreenState extends State<CountScreen> {
                       height: 16.h,
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 24.w),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SvgPicture.asset(
-                            AppImages.info,
-                            width: 12.w,
-                            height: 12.h,
-                            fit: BoxFit.fill,
-                          ),
-                          SizedBox(
-                            width: 6.w,
-                          ),
-                          Expanded(
-                            child: Padding(
-                              padding: EdgeInsets.only(
-                                right: 60.w,
-                              ),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 24.w,
+                        ),
+                        child: Row(
+                          children: [
+                            SvgPicture.asset(
+                              AppImages.info,
+                              height: 12.h,
+                              width: 12.w,
+                              fit: BoxFit.fill,
+                            ),
+                            SizedBox(
+                              width: 6.w,
+                            ),
+                            Expanded(
                               child: TextField(
-                                textInputAction: TextInputAction.done,
-                                keyboardType: TextInputType.number,
-                                maxLines: 2,
                                 decoration: InputDecoration(
-                                  hintText:
-                                      'Shu kungacha tutgan ro‘zalaringiz\nsonini kiriting',
-                                  border: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    hintText:
+                                        "Shu kungacha tutgan ro‘zalaringiz sonini kiriting",
+                                    hintMaxLines: 2,
+                                    hintStyle: AppTextStyle.interBold.copyWith(
+                                      fontSize: 16.w,
+                                      fontWeight: FontWeight.w400,
+                                      color: AppColors.c1A1A1A.withOpacity(
+                                        0.48,
+                                      ),
+                                    ),
+                                    border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: AppColors.transparent,
+                                        width: 1.w,
+                                      ),
+                                    ),
+                                    enabledBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
                                       color: AppColors.transparent,
                                       width: 1.w,
-                                    ),
-                                  ),
-                                ),
+                                    )),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: AppColors.transparent,
+                                        width: 1.w,
+                                      ),
+                                    )),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    )
+                          ],
+                        ))
                   ],
                 ),
               ),
@@ -332,6 +349,9 @@ class _CountScreenState extends State<CountScreen> {
             MyInkWell(
               voidCallback: () {},
               title: 'Tasdiqlash',
+            ),
+            SizedBox(
+              height: 20.h,
             ),
           ],
         ),
