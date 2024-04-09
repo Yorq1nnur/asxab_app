@@ -1,4 +1,5 @@
 import 'package:asxab_app/screens/global_widgets/my_ink_well.dart';
+import 'package:asxab_app/screens/tabs/prayer/calendar/calendar_screen.dart';
 import 'package:asxab_app/utils/colors/app_colors.dart';
 import 'package:asxab_app/utils/images/app_images.dart';
 import 'package:asxab_app/utils/styles/app_text_style.dart';
@@ -41,100 +42,99 @@ class _CountScreenState extends State<CountScreen> {
       child: Scaffold(
         body: Column(
           children: [
+            SizedBox(
+              height: 40.h,
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                left: 24.w,
+                right: 18.w,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 35.w,
+                    height: 35.w,
+                    child: Stack(
+                      children: [
+                        SvgPicture.asset(
+                          AppImages.moon,
+                          height: 35.h,
+                          width: 30.w,
+                          fit: BoxFit.fitHeight,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 20.w),
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Container(
+                              height: 18.w,
+                              width: 18.w,
+                              decoration: const BoxDecoration(
+                                  color: AppColors.c33CBC2,
+                                  shape: BoxShape.circle),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1.w,
+                          ),
+                        ),
+                        child: Image.asset(
+                          _selectImage(),
+                          width: 28.w,
+                          height: 20.h,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 8.w,
+                      ),
+                      DropdownButton<String>(
+                        icon: Icon(
+                          Icons.keyboard_arrow_down,
+                          size: 18.w,
+                          color: AppColors.c1A1A1A,
+                        ),
+                        value: selectedLanguage,
+                        onChanged: (newValue) {
+                          setState(() {
+                            selectedLanguage = newValue;
+                          });
+                        },
+                        items: programmingLanguages.map((String language) {
+                          return DropdownMenuItem<String>(
+                            value: language,
+                            child: Text(language),
+                          );
+                        }).toList(),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
             Expanded(
               flex: 10,
               child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
+                padding: EdgeInsets.symmetric(
+                  vertical: 10.h,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
-                      height: 40.h,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        left: 24.w,
-                        right: 18.w,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SizedBox(
-                            width: 35.w,
-                            height: 35.w,
-                            child: Stack(
-                              children: [
-                                SvgPicture.asset(
-                                  AppImages.moon,
-                                  height: 35.h,
-                                  width: 30.w,
-                                  fit: BoxFit.fitHeight,
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 20.w),
-                                  child: Align(
-                                    alignment: Alignment.center,
-                                    child: Container(
-                                      height: 18.w,
-                                      width: 18.w,
-                                      decoration: const BoxDecoration(
-                                          color: AppColors.c33CBC2,
-                                          shape: BoxShape.circle),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.black,
-                                    width: 1.w,
-                                  ),
-                                ),
-                                child: Image.asset(
-                                  _selectImage(),
-                                  width: 28.w,
-                                  height: 20.h,
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 8.w,
-                              ),
-                              DropdownButton<String>(
-                                icon: Icon(
-                                  Icons.keyboard_arrow_down,
-                                  size: 18.w,
-                                  color: AppColors.c1A1A1A,
-                                ),
-                                value: selectedLanguage,
-                                onChanged: (newValue) {
-                                  setState(() {
-                                    selectedLanguage = newValue;
-                                  });
-                                },
-                                items:
-                                    programmingLanguages.map((String language) {
-                                  return DropdownMenuItem<String>(
-                                    value: language,
-                                    child: Text(language),
-                                  );
-                                }).toList(),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20.h,
-                    ),
                     Padding(
                       padding: EdgeInsets.only(
                         left: 24.w,
@@ -291,54 +291,57 @@ class _CountScreenState extends State<CountScreen> {
                       height: 16.h,
                     ),
                     Padding(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 24.w,
-                        ),
-                        child: Row(
-                          children: [
-                            SvgPicture.asset(
-                              AppImages.info,
-                              height: 12.h,
-                              width: 12.w,
-                              fit: BoxFit.fill,
-                            ),
-                            SizedBox(
-                              width: 6.w,
-                            ),
-                            Expanded(
-                              child: TextField(
-                                decoration: InputDecoration(
-                                    hintText:
-                                        "Shu kungacha tutgan ro‘zalaringiz sonini kiriting",
-                                    hintMaxLines: 2,
-                                    hintStyle: AppTextStyle.interBold.copyWith(
-                                      fontSize: 16.w,
-                                      fontWeight: FontWeight.w400,
-                                      color: AppColors.c1A1A1A.withOpacity(
-                                        0.48,
-                                      ),
-                                    ),
-                                    border: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: AppColors.transparent,
-                                        width: 1.w,
-                                      ),
-                                    ),
-                                    enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                      color: AppColors.transparent,
-                                      width: 1.w,
-                                    )),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: AppColors.transparent,
-                                        width: 1.w,
-                                      ),
-                                    )),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 24.w,
+                      ),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            AppImages.info,
+                            height: 12.h,
+                            width: 12.w,
+                            fit: BoxFit.fill,
+                          ),
+                          SizedBox(
+                            width: 6.w,
+                          ),
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                hintText:
+                                    "Shu kungacha tutgan ro‘zalaringiz sonini kiriting",
+                                hintMaxLines: 2,
+                                hintStyle: AppTextStyle.interBold.copyWith(
+                                  fontSize: 16.w,
+                                  fontWeight: FontWeight.w400,
+                                  color: AppColors.c1A1A1A.withOpacity(
+                                    0.48,
+                                  ),
+                                ),
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: AppColors.transparent,
+                                    width: 1.w,
+                                  ),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: AppColors.transparent,
+                                    width: 1.w,
+                                  ),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: AppColors.transparent,
+                                    width: 1.w,
+                                  ),
+                                ),
                               ),
                             ),
-                          ],
-                        ))
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -347,7 +350,14 @@ class _CountScreenState extends State<CountScreen> {
               height: 10.h,
             ),
             MyInkWell(
-              voidCallback: () {},
+              voidCallback: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CalendarScreen(),
+                  ),
+                );
+              },
               title: 'Tasdiqlash',
             ),
             SizedBox(
