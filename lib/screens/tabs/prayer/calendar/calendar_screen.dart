@@ -76,10 +76,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                       const AsxabText(),
                     ],
                   ),
-                  Container(
-                    padding: EdgeInsets.all(
-                      15.w,
-                    ),
+                  Ink(
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
@@ -87,18 +84,30 @@ class _CalendarScreenState extends State<CalendarScreen> {
                         width: 1.w,
                       ),
                     ),
-                    child: Center(
-                      child: SvgPicture.asset(
-                        AppImages.notification,
-                        height: 24.h,
-                        width: 24.w,
+                    child: InkWell(
+                      onTap: () {},
+                      borderRadius: BorderRadius.circular(
+                        50.r,
+                      ),
+                      child: Center(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 10.w,
+                            vertical: 10.w,
+                          ),
+                          child: SvgPicture.asset(
+                            AppImages.notification,
+                            height: 24.h,
+                            width: 24.w,
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ],
               ),
               SizedBox(
-                height: 50.h,
+                height: 30.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -132,7 +141,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 ),
               ),
               SizedBox(
-                height: 24.h,
+                height: 20.h,
               ),
               Container(
                 padding: EdgeInsets.symmetric(
@@ -188,23 +197,29 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 ),
               ),
               SizedBox(
-                height: 24.h,
+                height: 20.h,
               ),
-              TableCalendar(
-                focusedDay: DateTime.now(),
-                currentDay: DateTime.now(),
-                firstDay: DateTime(2000),
-                lastDay: DateTime(
-                  2100,
+              Expanded(
+                child: SingleChildScrollView(
+                  child: TableCalendar(
+                    focusedDay: DateTime.now(),
+                    currentDay: DateTime.now(),
+                    firstDay: DateTime(2000),
+                    lastDay: DateTime(
+                      2100,
+                    ),
+                  ),
                 ),
               ),
-              const Spacer(),
+              SizedBox(
+                height: 10.h,
+              ),
               MyInkWell(
                 voidCallback: () {},
                 title: "Ro'za tutdim",
               ),
               SizedBox(
-                height: 20.h,
+                height: 10.h,
               ),
             ],
           ),

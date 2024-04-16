@@ -21,12 +21,16 @@ class _TabBoxState extends State<TabBox> {
 
   @override
   void initState() {
+    _init();
+    super.initState();
+  }
+
+  void _init(){
     _screens = [
       const PrayerScreen(),
       const FastingScreen(),
       const ProfileScreen(),
     ];
-    super.initState();
   }
 
   @override
@@ -34,6 +38,7 @@ class _TabBoxState extends State<TabBox> {
     return Scaffold(
       body: _screens[_activeIndex],
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
         onTap: (newActiveIndex) {
           _activeIndex = newActiveIndex;
           setState(() {});
