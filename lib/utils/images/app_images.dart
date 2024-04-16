@@ -16,6 +16,7 @@ class AppImages {
   static const String moon = "assets/icons/moon.svg";
   static const String circle = "assets/icons/circle.svg";
   static const String info = "assets/icons/info.svg";
+  static const String linear = "assets/icons/linear.svg";
 
 
   //.jpg
