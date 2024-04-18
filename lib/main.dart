@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
             scaffoldBackgroundColor: AppColors.white,
           ),
-          initialRoute: RouteNames.tabBox,
+          initialRoute: RouteNames.fastingScreen,
           onGenerateRoute: AppRoutes.generateRoute,
         );
       },

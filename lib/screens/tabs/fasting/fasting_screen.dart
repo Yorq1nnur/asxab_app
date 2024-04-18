@@ -33,12 +33,12 @@ class FastingScreen extends StatelessWidget {
               child: Image.asset(
                 AppImages.back,
                 width: 375.w,
-                height: 400.h,
+                height: 439.h,
                 fit: BoxFit.fill,
               ),
             ),
             SizedBox(
-              height: 20.h,
+              height: 36.h,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,13 +82,14 @@ class FastingScreen extends StatelessWidget {
                   height: 30.h,
                 ),
                 MyInkWell(
-                    voidCallback: () {
-                      Navigator.pushNamed(
-                        context,
-                        RouteNames.countScreen,
-                      );
-                    },
-                    title: "Hisoblash")
+                  voidCallback: () {
+                    Navigator.pushNamed(
+                      context,
+                      RouteNames.countScreen,
+                    );
+                  },
+                  title: "Hisoblash",
+                )
               ],
             ),
           ],
