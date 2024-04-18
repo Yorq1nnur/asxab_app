@@ -9,7 +9,9 @@ class AppRoutes {
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RouteNames.tabBox:
-        return navigate(const TabBox());
+        return navigate(
+          const TabBox(),
+        );
 
       case RouteNames.prayerScreen:
         return navigate(
@@ -27,7 +29,7 @@ class AppRoutes {
         return navigate(
           const ProfileScreen(),
         );
-        case RouteNames.countScreen:
+      case RouteNames.countScreen:
         return navigate(
           const CountScreen(),
         );

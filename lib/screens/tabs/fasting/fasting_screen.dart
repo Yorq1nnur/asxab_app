@@ -3,6 +3,7 @@ import 'package:asxab_app/screens/tabs/routes.dart';
 import 'package:asxab_app/utils/colors/app_colors.dart';
 import 'package:asxab_app/utils/images/app_images.dart';
 import 'package:asxab_app/utils/styles/app_text_style.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -40,57 +41,58 @@ class FastingScreen extends StatelessWidget {
             SizedBox(
               height: 36.h,
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 15.w,
-                  ),
-                  child: Text(
-                    "Qazo ro‘zalaringiz bormi? Hisoblab, tutishni boshlang",
-                    style: AppTextStyle.interBold.copyWith(
-                      color: AppColors.c1A1A1A,
-                      fontSize: 24.w,
-                      fontWeight: FontWeight.w600,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 15.w,
                     ),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                SizedBox(
-                  height: 8.h,
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 32.w,
-                  ),
-                  child: Text(
-                    "Hisoblash tugmasini bosganingizdan so’ng sizga 2 ta kerakli savollar beriladi",
-                    style: AppTextStyle.interBold.copyWith(
-                      color: AppColors.c1A1A1A.withOpacity(
-                        0.5,
+                    child: Text(
+                      "Qazo ro‘zalaringiz bormi? Hisoblab, tutishni boshlang",
+                      style: AppTextStyle.interBold.copyWith(
+                        color: AppColors.c1A1A1A,
+                        fontSize: 24.w,
+                        fontWeight: FontWeight.w600,
                       ),
-                      fontSize: 15.w,
-                      fontWeight: FontWeight.w400,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
-                ),
-                SizedBox(
-                  height: 30.h,
-                ),
-                MyInkWell(
-                  voidCallback: () {
-                    Navigator.pushNamed(
-                      context,
-                      RouteNames.countScreen,
-                    );
-                  },
-                  title: "Hisoblash",
-                )
-              ],
+                  SizedBox(
+                    height: 8.h,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 32.w,
+                    ),
+                    child: Text(
+                      "Hisoblash tugmasini bosganingizdan so’ng sizga 2 ta kerakli savollar beriladi",
+                      style: AppTextStyle.interBold.copyWith(
+                        color: AppColors.c1A1A1A.withOpacity(
+                          0.5,
+                        ),
+                        fontSize: 15.w,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  const Spacer(),
+                  MyInkWell(
+                    voidCallback: () {
+                      Navigator.pushNamed(
+                        context,
+                        RouteNames.countScreen,
+                      );
+                    },
+                    title: "Hisoblash",
+                  ),
+                  SizedBox(height: 20.h,),
+                ],
+              ),
             ),
           ],
         ),
