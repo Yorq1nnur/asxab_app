@@ -28,27 +28,31 @@ flutter:
 
 
   assets:
-    - assets/fonts/bodoni/
-    - assets/fonts/inter/
+    - assets/fonts/gilroy/
     - assets/images/
     - assets/icons/
     - assets/lottie/
 
   fonts:
-    - family: Bodoni
+    - family: gilroy
       fonts:
-        - asset: assets/fonts/bodoni/BodoniFLF-Bold.ttf
-        - asset: assets/fonts/bodoni/BodoniFLF-BoldItalic.ttf
-        - asset: assets/fonts/bodoni/BodoniFLF-Italic.ttf
+        - asset: assets/fonts/gilroy/Gilroy-Black.ttf
+        - asset: assets/fonts/gilroy/Gilroy-BlackItalic.ttf
+        - asset: assets/fonts/gilroy/Gilroy-Bold.ttf
+        - asset: assets/fonts/gilroy/Gilroy-ExtraBold.ttf
+        - asset: assets/fonts/gilroy/Gilroy-BoldItalic.ttf
+        - asset: assets/fonts/gilroy/Gilroy-Heavy.ttf
+        - asset: assets/fonts/gilroy/Gilroy-HeavyItalic.ttf
+        - asset: assets/fonts/gilroy/Gilroy-Light.ttf
+        - asset: assets/fonts/gilroy/Gilroy-LightItalic.ttf
+        - asset: assets/fonts/gilroy/Gilroy-Medium.ttf
+        - asset: assets/fonts/gilroy/Gilroy-MediumItalic.ttf
+        - asset: assets/fonts/gilroy/Gilroy-Regular.ttf
+        - asset: assets/fonts/gilroy/Gilroy-RegularItalic.ttf
+        - asset: assets/fonts/gilroy/Gilroy-SemiBold.ttf
+        - asset: assets/fonts/gilroy/Gilroy-SemiBoldItalic.ttf
+        - asset: assets/fonts/gilroy/Gilroy-Thin.ttf
+        - asset: assets/fonts/gilroy/Gilroy-ThinItalic.ttf
+        - asset: assets/fonts/gilroy/Gilroy-UltraLight.ttf
+        - asset: assets/fonts/gilroy/Gilroy-UltraLightItalic.ttf
           style: italic
-        - asset: assets/fonts/bodoni/BodoniFLF-Roman.ttf
-
-    - family: Inter
-      fonts:
-        - asset: assets/fonts/inter/Inter-Black.otf
-        - asset: assets/fonts/inter/Inter-Bold.otf
-        - asset: assets/fonts/inter/Inter-Italic.otf
-        - asset: assets/fonts/inter/Inter-Light.otf
-        - asset: assets/fonts/inter/Inter-Medium.otf
-        - asset: assets/fonts/inter/Inter-Regular.otf
-        - asset: assets/fonts/inter/Inter-SemiBold.otf

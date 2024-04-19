@@ -29,7 +29,7 @@ class MyInkWell extends StatelessWidget {
           child: Center(
             child: Text(
               title,
-              style: AppTextStyle.interBold.copyWith(
+              style: AppTextStyle.gilroyBold.copyWith(
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.w400,

@@ -1,5 +1,5 @@
+import 'package:asxab_app/screens/tabs/fasting/count/count_screen.dart';
 import 'package:asxab_app/screens/tabs/fasting/fasting_screen.dart';
-import 'package:asxab_app/screens/tabs/prayer/count/count_screen.dart';
 import 'package:asxab_app/screens/tabs/prayer/prayer_screen.dart';
 import 'package:asxab_app/screens/tabs/profile/profile_screen.dart';
 import 'package:asxab_app/screens/tabs/tab_box.dart';

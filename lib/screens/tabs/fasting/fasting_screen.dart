@@ -3,7 +3,6 @@ import 'package:asxab_app/screens/tabs/routes.dart';
 import 'package:asxab_app/utils/colors/app_colors.dart';
 import 'package:asxab_app/utils/images/app_images.dart';
 import 'package:asxab_app/utils/styles/app_text_style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,6 +15,8 @@ class FastingScreen extends StatelessWidget {
     return AnnotatedRegion(
       value: const SystemUiOverlayStyle(
         statusBarColor: AppColors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.dark,
       ),
       child: Scaffold(
         body: Column(
@@ -51,7 +52,7 @@ class FastingScreen extends StatelessWidget {
                     ),
                     child: Text(
                       "Qazo ro‘zalaringiz bormi? Hisoblab, tutishni boshlang",
-                      style: AppTextStyle.interBold.copyWith(
+                      style: AppTextStyle.gilroyBold.copyWith(
                         color: AppColors.c1A1A1A,
                         fontSize: 24.w,
                         fontWeight: FontWeight.w600,
@@ -70,7 +71,7 @@ class FastingScreen extends StatelessWidget {
                     ),
                     child: Text(
                       "Hisoblash tugmasini bosganingizdan so’ng sizga 2 ta kerakli savollar beriladi",
-                      style: AppTextStyle.interBold.copyWith(
+                      style: AppTextStyle.gilroyBold.copyWith(
                         color: AppColors.c1A1A1A.withOpacity(
                           0.5,
                         ),

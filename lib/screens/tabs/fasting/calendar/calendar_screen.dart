@@ -25,8 +25,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return AnnotatedRegion(
       value: const SystemUiOverlayStyle(
         statusBarColor: AppColors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.dark,
       ),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: 24.w,
@@ -47,7 +50,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 children: [
                   Text(
                     "Umumiy qazo ro‘zalaringiz",
-                    style: AppTextStyle.interBold.copyWith(
+                    style: AppTextStyle.gilroyBold.copyWith(
                       fontSize: 18.sp,
                       fontWeight: FontWeight.w400,
                       color: AppColors.c1A1A1A,
@@ -66,7 +69,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
               ),
               Text(
                 "143 kunlik",
-                style: AppTextStyle.interBold.copyWith(
+                style: AppTextStyle.gilroyBold.copyWith(
                   fontSize: 42.sp,
                   fontWeight: FontWeight.w400,
                   color: AppColors.c1A1A1A,
@@ -113,7 +116,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                           child: Center(
                             child: Text(
                               titles[index],
-                              style: AppTextStyle.interBold.copyWith(
+                              style: AppTextStyle.gilroyBold.copyWith(
                                 fontSize: 16.sp,
                                 fontWeight: FontWeight.w600,
                                 color: activeIndex == index
@@ -170,7 +173,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                             children: [
                               Text(
                                 "QAZO RO'ZA",
-                                style: AppTextStyle.interBold.copyWith(
+                                style: AppTextStyle.gilroyBold.copyWith(
                                   color: AppColors.c1A1A1A,
                                   fontSize: 15.sp,
                                   fontWeight: FontWeight.w600,
@@ -181,7 +184,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                               ),
                               Text(
                                 "Tutilgan ro'za",
-                                style: AppTextStyle.interBold.copyWith(
+                                style: AppTextStyle.gilroyBold.copyWith(
                                   fontSize: 15.sp,
                                   fontWeight: FontWeight.w400,
                                   color: AppColors.c1A1A1A.withOpacity(
@@ -194,7 +197,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                               ),
                               Text(
                                 "17 kun",
-                                style: AppTextStyle.interBold.copyWith(
+                                style: AppTextStyle.gilroyBold.copyWith(
                                     fontSize: 24.sp,
                                     fontWeight: FontWeight.w700,
                                     color: AppColors.c1A1A1A),
@@ -230,7 +233,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                                   alignment: Alignment.center,
                                   child: Text(
                                     "24%",
-                                    style: AppTextStyle.interBold,
+                                    style: AppTextStyle.gilroyBold,
                                   ),
                                 )
                               ],

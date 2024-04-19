@@ -47,12 +47,12 @@ class _TabBoxState extends State<TabBox> {
         type: BottomNavigationBarType.fixed,
         selectedFontSize: 15,
         unselectedFontSize: 15,
-        selectedLabelStyle: AppTextStyle.interBold.copyWith(
+        selectedLabelStyle: AppTextStyle.gilroyBold.copyWith(
           color: AppColors.c1A1A1A,
           fontSize: 16.w,
           fontWeight: FontWeight.w400,
         ),
-        unselectedLabelStyle: AppTextStyle.interBold.copyWith(
+        unselectedLabelStyle: AppTextStyle.gilroyBold.copyWith(
           color: AppColors.c1A1A1A,
           fontSize: 16.w,
           fontWeight: FontWeight.w400,

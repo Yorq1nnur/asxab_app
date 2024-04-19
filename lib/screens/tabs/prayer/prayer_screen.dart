@@ -18,7 +18,7 @@ class PrayerScreen extends StatelessWidget {
           elevation: 0,
           title: Text(
             'Prayer screen',
-            style: AppTextStyle.interBold,
+            style: AppTextStyle.gilroyBold,
           ),
         ),
       ),

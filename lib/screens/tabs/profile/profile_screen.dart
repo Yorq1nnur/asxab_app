@@ -18,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
           centerTitle: true,
           title: Text(
             "Profile screen",
-            style: AppTextStyle.interBold,
+            style: AppTextStyle.gilroyBold,
           ),
         ),
       ),
