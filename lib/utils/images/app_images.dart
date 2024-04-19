@@ -1,5 +1,5 @@
 class AppImages {
-  //.png
+  //.jpg
 
   //.svg
   static const String profile = "assets/icons/profile.svg";
@@ -19,7 +19,7 @@ class AppImages {
   static const String linear = "assets/icons/linear.svg";
 
 
-  //.jpg
+  //.png
   static const String back = "assets/images/back.png";
   static const String calendar = "assets/images/calendar.png";
   static const String uzb = "assets/images/uzb.png";
