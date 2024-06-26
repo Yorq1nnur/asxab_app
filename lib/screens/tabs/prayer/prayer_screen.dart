@@ -21,6 +21,9 @@ class PrayerScreen extends StatelessWidget {
             style: AppTextStyle.gilroyBold,
           ),
         ),
+        body: ListView(
+
+        ),
       ),
     );
   }

@@ -1,4 +1,4 @@
-import 'package:asxab_app/screens/tabs/fasting/fasting_screen.dart';
+// import 'package:asxab_app/screens/tabs/fasting/fasting_screen.dart';
 import 'package:asxab_app/screens/tabs/prayer/prayer_screen.dart';
 import 'package:asxab_app/screens/tabs/profile/profile_screen.dart';
 import 'package:asxab_app/utils/colors/app_colors.dart';
@@ -25,10 +25,10 @@ class _TabBoxState extends State<TabBox> {
     super.initState();
   }
 
-  void _init(){
+  void _init() {
     _screens = [
       const PrayerScreen(),
-      const FastingScreen(),
+      // const FastingScreen(),
       const ProfileScreen(),
     ];
   }
@@ -45,8 +45,8 @@ class _TabBoxState extends State<TabBox> {
         },
         currentIndex: _activeIndex,
         type: BottomNavigationBarType.fixed,
-        selectedFontSize: 15,
-        unselectedFontSize: 15,
+        selectedFontSize: 15.w,
+        unselectedFontSize: 15.w,
         selectedLabelStyle: AppTextStyle.gilroyBold.copyWith(
           color: AppColors.c33CBC2,
           fontSize: 16.w,
@@ -58,6 +58,8 @@ class _TabBoxState extends State<TabBox> {
           fontWeight: FontWeight.w400,
         ),
         backgroundColor: Colors.white,
+        selectedItemColor: AppColors.c33CBC2,
+        unselectedItemColor: AppColors.c1A1A1A,
         items: [
           BottomNavigationBarItem(
             activeIcon: SvgPicture.asset(
@@ -72,19 +74,19 @@ class _TabBoxState extends State<TabBox> {
             ),
             label: "Namoz",
           ),
-          BottomNavigationBarItem(
-            activeIcon: SvgPicture.asset(
-              AppImages.activeFasting,
-              height: 24.h,
-              width: 24.w,
-            ),
-            icon: SvgPicture.asset(
-              AppImages.fasting,
-              height: 24.h,
-              width: 24.w,
-            ),
-            label: "Ro'za",
-          ),
+          // BottomNavigationBarItem(
+          //   activeIcon: SvgPicture.asset(
+          //     AppImages.activeFasting,
+          //     height: 24.h,
+          //     width: 24.w,
+          //   ),
+          //   icon: SvgPicture.asset(
+          //     AppImages.fasting,
+          //     height: 24.h,
+          //     width: 24.w,
+          //   ),
+          //   label: "Ro'za",
+          // ),
           BottomNavigationBarItem(
             activeIcon: SvgPicture.asset(
               AppImages.activeProfile,

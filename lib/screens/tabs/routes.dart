@@ -51,9 +51,9 @@ class AppRoutes {
 }
 
 class RouteNames {
-  static const String tabBox = "/tab_box";
+  static const String tabBox = "/";
   static const String prayerScreen = "/prayer_route";
-  static const String fastingScreen = "/";
+  static const String fastingScreen = "/fasting_route";
   static const String profileScreen = "/profile_route";
   static const String countScreen = "/count_route";
 }
