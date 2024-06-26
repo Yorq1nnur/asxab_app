@@ -48,12 +48,12 @@ class _TabBoxState extends State<TabBox> {
         selectedFontSize: 15,
         unselectedFontSize: 15,
         selectedLabelStyle: AppTextStyle.gilroyBold.copyWith(
-          color: AppColors.c1A1A1A,
+          color: AppColors.c33CBC2,
           fontSize: 16.w,
           fontWeight: FontWeight.w400,
         ),
         unselectedLabelStyle: AppTextStyle.gilroyBold.copyWith(
-          color: AppColors.c1A1A1A,
+          color: AppColors.c33CBC2,
           fontSize: 16.w,
           fontWeight: FontWeight.w400,
         ),
