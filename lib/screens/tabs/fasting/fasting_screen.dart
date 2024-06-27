@@ -52,7 +52,7 @@ class FastingScreen extends StatelessWidget {
                     ),
                     child: Text(
                       "Qazo ro‘zalaringiz bormi? Hisoblab, tutishni boshlang",
-                      style: AppTextStyle.gilroyBold.copyWith(
+                      style: AppTextStyle.gilroyW700.copyWith(
                         color: AppColors.c1A1A1A,
                         fontSize: 24.w,
                         fontWeight: FontWeight.w600,
@@ -71,7 +71,7 @@ class FastingScreen extends StatelessWidget {
                     ),
                     child: Text(
                       "Hisoblash tugmasini bosganingizdan so’ng sizga 2 ta kerakli savollar beriladi",
-                      style: AppTextStyle.gilroyBold.copyWith(
+                      style: AppTextStyle.gilroyW700.copyWith(
                         color: AppColors.c1A1A1A.withOpacity(
                           0.5,
                         ),

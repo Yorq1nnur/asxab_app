@@ -158,7 +158,7 @@ class _CountScreenState extends State<CountScreen> {
                   child: Text(
                     "Qazo ro‘zani hisoblash",
                     textAlign: TextAlign.start,
-                    style: AppTextStyle.gilroyBold.copyWith(
+                    style: AppTextStyle.gilroyW700.copyWith(
                       fontSize: 30.w,
                       fontWeight: FontWeight.w600,
                       color: AppColors.c1A1A1A,
@@ -174,7 +174,7 @@ class _CountScreenState extends State<CountScreen> {
                   ),
                   child: Text(
                     "Ramazon ro‘zasini to‘liq tutishni boshlagan kuningiz",
-                    style: AppTextStyle.gilroyBold.copyWith(
+                    style: AppTextStyle.gilroyW700.copyWith(
                       fontSize: 24.w,
                       fontWeight: FontWeight.w500,
                       color: AppColors.c1A1A1A.withOpacity(
@@ -215,7 +215,7 @@ class _CountScreenState extends State<CountScreen> {
                                   textInputAction: index == 2
                                       ? TextInputAction.done
                                       : TextInputAction.next,
-                                  style: AppTextStyle.gilroyBold.copyWith(
+                                  style: AppTextStyle.gilroyW700.copyWith(
                                     fontSize: 18.w,
                                     fontWeight: FontWeight.w400,
                                     color: AppColors.c1A1A1A.withOpacity(
@@ -230,7 +230,7 @@ class _CountScreenState extends State<CountScreen> {
                                         Colors.pinkAccent.withOpacity(0.11),
                                     hintText: titles[index],
                                     hintStyle:
-                                        AppTextStyle.gilroyBold.copyWith(
+                                        AppTextStyle.gilroyW700.copyWith(
                                       color: AppColors.c1A1A1A.withOpacity(
                                         0.3,
                                       ),
@@ -261,7 +261,7 @@ class _CountScreenState extends State<CountScreen> {
                   ),
                   child: Text(
                     "Tutilgan qazo ro‘zalaringiz bo‘lsa, ularni kiriting*",
-                    style: AppTextStyle.gilroyBold.copyWith(
+                    style: AppTextStyle.gilroyW700.copyWith(
                         fontSize: 24.w,
                         fontWeight: FontWeight.w500,
                         color: AppColors.c1A1A1A.withOpacity(0.48)),
@@ -290,7 +290,7 @@ class _CountScreenState extends State<CountScreen> {
                             ),
                           ),
                           hintText: 'Masalan: 60 kun',
-                          hintStyle: AppTextStyle.gilroyBold.copyWith(
+                          hintStyle: AppTextStyle.gilroyW700.copyWith(
                             color: AppColors.c1A1A1A.withOpacity(
                               0.3,
                             ),
@@ -326,7 +326,7 @@ class _CountScreenState extends State<CountScreen> {
                             hintText:
                                 "Shu kungacha tutgan ro‘zalaringiz sonini kiriting",
                             hintMaxLines: 2,
-                            hintStyle: AppTextStyle.gilroyBold.copyWith(
+                            hintStyle: AppTextStyle.gilroyW700.copyWith(
                               fontSize: 16.w,
                               fontWeight: FontWeight.w400,
                               color: AppColors.c1A1A1A.withOpacity(

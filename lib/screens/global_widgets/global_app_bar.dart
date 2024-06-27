@@ -36,7 +36,9 @@ class GlobalAppBar extends StatelessWidget {
                         height: 18.w,
                         width: 18.w,
                         decoration: const BoxDecoration(
-                            color: AppColors.c33CBC2, shape: BoxShape.circle),
+                          color: AppColors.c33CBC2,
+                          shape: BoxShape.circle,
+                        ),
                       ),
                     ),
                   ),
